@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Curdi_Leo\Documents\Coding Projects\Leetcode\5-16 two sum - cpp\leetcode cpp\main.cpp(49,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  leetcode cpp.vcxproj -> C:\Users\Curdi_Leo\Documents\Coding Projects\Leetcode\5-16 two sum - cpp\x64\Debug\leetcode cpp.exe
