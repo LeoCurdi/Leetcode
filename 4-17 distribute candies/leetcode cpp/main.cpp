@@ -9,6 +9,7 @@
 #include <chrono>
 #include <iomanip>
 #include <ctime>
+#include <algorithm> // for using sort
 
 using std::cin;
 using std::cout;
@@ -20,6 +21,7 @@ using std::ostream;
 using std::string;
 using std::vector;
 using std::stringstream;
+using std::sort;
 
 
 class Solution {
@@ -29,7 +31,7 @@ public:
         int a = 0, b = 0;
         vector<int> unique;
 
-        // sort candy type
+        // sort candy type 
         sort(candyType.begin(), candyType.end());
 
         for (; a < candyType.size(); a++) {

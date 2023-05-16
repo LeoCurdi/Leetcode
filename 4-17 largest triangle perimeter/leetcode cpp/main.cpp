@@ -9,6 +9,7 @@
 #include <chrono>
 #include <iomanip>
 #include <ctime>
+#include <algorithm> // for using sort
 
 using std::cin;
 using std::cout;
@@ -20,6 +21,7 @@ using std::ostream;
 using std::string;
 using std::vector;
 using std::stringstream;
+using std::sort;
 
 
 class Solution {
