@@ -1,5 +1,4 @@
-#ifndef HEADER_H
-#define HEADER_H
+
 
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -12,4 +11,11 @@
 #include <time.h>
 #include <conio.h>
 
-#endif
+
+
+int main(void) {
+
+
+	printf("\n\n\n");
+	return 0;
+}

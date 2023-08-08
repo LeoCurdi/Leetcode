@@ -1,9 +1,15 @@
-/*
-	Date: 1/30/2023
-	Assignment: Leetcode #121 best time to buy and sell stocks
-	Description: sliding glass approach to find the biggest profit
-*/
-#include "header.h"
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include <stdio.h>
+#include <ctype.h>
+#include <math.h>
+#include <string.h>
+#include <windows.h>
+#include <stdlib.h>
+#include <time.h>
+#include <conio.h>
+
 
 // Erick's solution. Just keep moving r, checking the profit each time, saving it if its a high, and only move l when a new low is discovered
 int maxprof(int* arr, int arrlen) {
