@@ -1,0 +1,55 @@
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.left = None
+#         self.right = None
+
+
+class Solution:
+    def levelOrder(self, root: TreeNode) -> List[List[int]]:
+        """
+        Level order traversal uses breadth first search means traversing each level before descending to the next level
+
+        - use a queue: insert elements to the right, process them from the left
+        - take the first element and add it to the queue
+        - when you pop the element, add its children from left to right
+        - time is o(n) because we are processing n nodes
+        - space is o(n) because the queue will store n/2 elements at any given time
+        """
+
+        # result array
+        result = []
+
+        # a queue in python
+        queue = collections.deque()
+
+        # start by pushing the root (unless tree is null)
+        if root:
+            queue.append(root)
+
+        # while the queue is not empty
+        while queue:
+            # array for storing the entire current level
+            currentLevel = []
+
+            # process all the nodes from the current level
+            # (this is the level that was already inserted into the queue last iteration)
+            for i in range(len(queue)):
+                # process the current node
+                # grab it
+                cur = queue.popleft()
+                # save the value to the record
+                currentLevel.append(cur.val)
+                # push left child
+                if cur.left:
+                    queue.append(cur.left)
+                # push right child
+                if cur.right:
+                    queue.append(cur.right)
+            # add the level to the final result
+            result.append(currentLevel)
+        return result
+                
+
+

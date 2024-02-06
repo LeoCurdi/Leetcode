@@ -9,8 +9,8 @@ class Solution:
         # use for in loop for easier code
         for price in prices: # for each price in prices (this is the right pointer)
             # check for new lowest
-            if price < left:
-                left = price
+            if price < lowest:
+                lowest = price
             # compute the current profit
             currentProfit = price - lowest
             # if it is a new pax profit, overwrite it
