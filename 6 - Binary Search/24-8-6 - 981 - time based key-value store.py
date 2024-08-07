@@ -13,7 +13,7 @@ class TimeMap:
         # check if the key is in the hashmap
         if key not in self.store:
             self.store[key] = [] # give the new key an empty list to start
-        # append the value/time pair
+        # append the value/time pai
         self.store[key].append([value, timestamp])
 
     """
