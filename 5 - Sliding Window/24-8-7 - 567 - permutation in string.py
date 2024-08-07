@@ -6,6 +6,9 @@ class Solution:
 
         - brute force: check all possible substrings of s2 against s1 in a hashmap to see if one has the same set of chars
         - better: use sliding window to do it in one pass, dropping and adding chars to the hashmap along the way
+        
+        - time: 26*n, for one pass, where each hashmap check could require checking 26 chars
+        - space: 26*logn for inserting up to 26 chars in a map with their counts
         """
         if len(s2) < len(s1):
             return False
