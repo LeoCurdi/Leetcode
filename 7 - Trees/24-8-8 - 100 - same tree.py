@@ -19,3 +19,10 @@ class Solution:
         # if left and right subtrees are the same, and current nodes are the same
         if p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right):
             return True
+        else:
+            return False
+
+# goofy solution
+class Solution:
+    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+        return (not p and not q) or (p and q and p.val == q.val and self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right))
