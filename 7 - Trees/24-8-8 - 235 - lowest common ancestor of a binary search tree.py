@@ -15,6 +15,9 @@ class Solution:
         - since a node in a BST is basically a pivot between lower and higher values, 
           any node valued between p and q must be the LCA,
           as the lower of the 2 must be in the left subtree and the higher must be in the right
+        
+        - time: height of tree = logn
+        - space: constant since were not using any extra data structures
         """
         # make p the lower node for consistency
         if p.val > q.val:
