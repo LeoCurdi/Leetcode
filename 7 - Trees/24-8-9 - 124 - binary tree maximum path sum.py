@@ -15,6 +15,8 @@ class Solution:
             -  for each node (starting from the leaves):
                 - compute and save the max path, then compute and return the max path without splitting
                 - the max path for a node is: the max paths of the left and right subtrees + the current node value
+        
+        - time: linear for visiting each node once
         """
         # edge case
         if not root:
