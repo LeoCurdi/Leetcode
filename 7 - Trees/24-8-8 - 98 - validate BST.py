@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 class Solution:
+    # in order traversal with checking prev node solution
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
         """
         - given: a BST
@@ -28,12 +29,37 @@ class Solution:
             
             # traverse the tree and visit in order
             helper(root.left)
-            if root.val < self.prevNodeVal: # this is the validating condition
+            if root.val <= self.prevNodeVal: # this is the validating condition
                 self.result = False
             self.prevNodeVal = root.val
             helper(root.right)
-            
+
             return
         
         helper(root)
+        return self.result
+    
+    # pre order traversal with checking bounds solution
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
+        # bounds
+        lower, upper = float("-inf"), float("inf")
+        self.result = True
+
+        #dfs helper
+        def helper(cur, lower, upper):
+            if not cur:
+                return
+            
+            # check if the current is between the bounds
+            if lower < cur.val and cur.val < upper:
+                # call dfs with new bounds on the left and right subtree
+                # if were going to the left subtree, the current node becomes the upper bound etc
+                helper(cur.left, lower, cur.val)
+                helper(cur.right, cur.val, upper)
+            else:
+                self.result = False
+
+            return
+        
+        helper(root, lower, upper)
         return self.result
