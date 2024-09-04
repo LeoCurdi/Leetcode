@@ -16,7 +16,7 @@ class Solution:
         - we dont need to keep track of which task is which, just the quantities remaining since we just need to find the total time
         - use a min heap with negative values since python doesn't support max heaps
 
-        - time:
+        - time: linear for counting frequencies, heapify, and processing each task
         - space: linear for adding the input to a counter, a heap, and a queue
         """
         curTime = 0
