@@ -21,10 +21,10 @@ class Solution:
                     right = middle -1
             # middle < left
             else:
-                # target is less than middle or greater than left, its to the left
-                if target < nums[middle] or target > nums[left]:
+                # target is less than middle or greater than right, its to the left
+                if target < nums[middle] or target > nums[right]:
                     right = middle - 1
-                # target is greater than middle and less than left, its to the right
+                # target is greater than middle and less than right, its to the right
                 else:
                     left = middle + 1
         return -1
