@@ -22,10 +22,11 @@ class Solution:
                 l += 1
             # insert new char and shift r
             tempSet.add(s[r])
+            
+            # record length
+            result = max(r - l + 1, result)
+            
             if r < len(s) - 1:
                 r += 1
-
-            # record length
-            result = max(r - l, result)
 
         return result
