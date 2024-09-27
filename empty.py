@@ -1,5 +1,5 @@
-
-
+class Solution:
+    def
         """
         - given:
         - return:
