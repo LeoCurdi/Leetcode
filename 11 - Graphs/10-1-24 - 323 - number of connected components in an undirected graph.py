@@ -37,7 +37,8 @@ class Solution:
         def dfsHelper(cur, prev):
             # remove prev from the adjacencies list to smooth out the code
             adjs = edgeMap[cur]
-            adjs.pop(prev)
+            if prev in adjs:
+                adjs.remove(prev)
 
             # base case: cur has been visited
             if cur in visitedNodes:
